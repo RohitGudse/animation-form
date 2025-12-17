@@ -1,23 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title> FrontPage Animation</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <!-- From Uiverse.io by andrew-demchenk0 --> 
-<form class="form">
-  <ul class="wrapper">
-    
-    <li style="--i:4;"><input class="input" type="text" placeholder="Name" required=""></li>
-    <li style="--i:3;"><input class="input" placeholder="Phone number" required="" name="phone"></li>
-    <li style="--i:2;"><input class="input" type="email" placeholder="E-mail" required="" name="email"></li>
-    <button style="--i:1;">Submit</button>
-  </ul>
-</form>
 
-    
+<body>
+    <main>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+        <div class="change"></div>
+
+    </main>
+
+    <button>
+        <svg width="45" height="41" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line class="top" x1="4" y1="4" x2="41" y2="4" stroke="black" stroke-width="8" stroke-linecap="round" />
+            <line class="bottom" x1="4" y1="21" x2="41" y2="21" stroke="black" stroke-width="8"
+                stroke-linecap="round" />
+            <line class="medium" x1="4" y1="37" x2="41" y2="37" stroke="black" stroke-width="8"
+                stroke-linecap="round" />
+        </svg>
+
+    </button>
+
+
+    <section>
+
+        <div class="link showlink">
+            <a href="#"> Home </a>
+            <a href="#"> Projects </a>
+            <a href="#"> Offer </a>
+            <a href="#"> Contact </a>
+
+
+
+        </div>
+    </section>
+    <script>
+        const section = document.querySelectorAll("main div");
+        const btn = document.querySelector("button");
+        const strokeTop = document.querySelector(".top");
+        const strokeMedium = document.querySelector(".medium");
+        const strokeBottom = document.querySelector(".bottom");
+        const link = document.querySelector(".link");
+
+
+        btn.addEventListener("click", function () {
+            section.forEach(function (i) {
+                i.classList.toggle("change");
+                i.classList.toggle("back");
+            })
+        })
+
+        btn.addEventListener("click", function () {
+            strokeTop.classList.toggle("top-line");
+            strokeMedium.classList.toggle("medium-line");
+            strokeBottom.classList.toggle("bottom-line");
+            link.classList.toggle("showlink");
+            link.classList.toggle("hidelink")
+        })
+
+        btn.addEventListener("click", function () {
+            strokeTop.classList.toggle("top");
+            strokeMedium.classList.toggle("medium");
+            strokeBottom.classList.toggle("bottom");
+
+        })
+    </script>
 </body>
+
 </html>
